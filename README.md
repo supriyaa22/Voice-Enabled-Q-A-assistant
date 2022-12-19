@@ -4,7 +4,7 @@ by the users as well as give a brief summary of the same context has been propos
 
 # Technologies used
 * flask for back-end
-* html/css for front-end
+* html/css/js for front-end
 * SQLite for database
 * git for version control
 
