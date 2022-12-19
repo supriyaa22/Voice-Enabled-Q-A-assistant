@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Q & A Assistant</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../static/css/style_profile.css">
+</head>
+
+<body>
+
+  <div class="wrapper d-flex align-items-stretch">
+    <nav id="sidebar">
+      <div class="p-4 pt-5">
+        <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(img/logo1.png);"></a>
+        <ul class="list-unstyled components mb-5">
+          <li class="active">
+            <a href="./h">Home</a>
+          <li>
+            <a href="./a">Question Answering</a>
+          </li>
+          <li>
+            <a href="./b">Text Summarization</a>
+          </li>
+          <li>
+            <a href="./qa_history">QA Histroy</a>
+          </li>
+          <li>
+            <a href="./ts_history">Text Summarization History</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+          <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Toggle Menu</span>
+          </button>
+          <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto">
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./">Log out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <h2>Text Summarization</h2>
+      <br>
+      <h6>Insert your text: </h6>
+      <br>
+      <div class="insert">
+        <form action="/ts" method="POST">
+          <label for="myfile">
+            <textarea name="paragraph_text" cols="100" rows="20" placeholder="Type here..">{{context}}</textarea>
+            <br><br>
+            <div class="doc">
+              <div class="fileUpload btn btn-primary">
+                <span> Upload </span>
+              </div>
+              <input type="file" name="pic" id="uploadFile" />
+            </div>
+      </div>
+      <br>
+      <input type="submit" name="submit" value="Submit" id="submit" />
+      </form>
+      <br>
+      <br>
+      <br>
+      <label for="myfile">
+        <h6>Summary: </h6>
+      </label><br>
+      <form action="/ts_speech" method="POST">
+        <textarea name="answer" readonly="readonly" cols="100" rows="20" placeholder="">{{answer}}</textarea>
+        <button class="fa fa-microphone fa-1x" id="mic"></button>
+      </form>
+
+    </div>
+  </div>
+  </div>
+  <script src="../static/js/jquery.min.js"></script>
+  <script src="../static/js/popper.js"></script>
+  <script src="../static/js/bootstrap.min.js"></script>
+  <script src="../static/js/main.js"></script>
+</body>
+
+</html>

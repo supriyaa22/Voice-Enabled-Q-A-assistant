@@ -1,0 +1,5 @@
+opencv-python
+pytesseract
+tesseract-ocr (software setup)
+pip
+PyAudio(if error-> check python version-> accordingly download pyaudio from https://www.lfd.uci.edu/~gohlke/pythonlibs/ -> pip install PyAudio-0.2.11-cp39-cp39-win_amd64.whl)
