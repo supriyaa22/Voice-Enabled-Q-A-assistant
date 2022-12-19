@@ -10,6 +10,7 @@ by the users as well as give a brief summary of the same context has been propos
 
 # Steps to run the code
 * Download the code
+* Download the files pytorch_model.bin file and config.json from the drive link and the paste the files inside the folder ./static/qna-model
 * Create virual environment 
 * Install the requirements by using the requirements.txt file
 * run app.py file. App will be hosted on localhost:8000
